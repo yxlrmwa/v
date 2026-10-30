@@ -7,7 +7,17 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Library">
-<title>Library</title>
+<script>
+(function(){try{var c=document.createElement('canvas');c.width=c.height=512;var x=c.getContext('2d');
+x.fillStyle='#0a0b1c';x.fillRect(0,0,512,512);
+[[100,90,330,'10,132,255'],[450,140,320,'191,90,242'],[320,490,340,'255,55,95']].forEach(function(b){var g=x.createRadialGradient(b[0],b[1],0,b[0],b[1],b[2]);g.addColorStop(0,'rgb('+b[3]+')');g.addColorStop(1,'rgba('+b[3]+',0)');x.fillStyle=g;x.fillRect(0,0,512,512)});
+var g=x.createLinearGradient(96,96,416,416);g.addColorStop(0,'rgba(255,255,255,.5)');g.addColorStop(1,'rgba(255,255,255,.12)');
+x.beginPath();x.arc(256,256,160,0,7);x.fillStyle=g;x.fill();x.lineWidth=3;x.strokeStyle='rgba(255,255,255,.55)';x.stroke();
+x.beginPath();x.moveTo(222,180);x.lineTo(338,256);x.lineTo(222,332);x.closePath();x.fillStyle='#fff';x.strokeStyle='#fff';x.lineWidth=26;x.lineJoin='round';x.fill();x.stroke();
+var u=c.toDataURL('image/png');
+['apple-touch-icon','icon'].forEach(function(r){var l=document.createElement('link');l.rel=r;l.href=u;document.head.appendChild(l)})}catch(e){}})();
+</script>
+<title>Vain</title>
 <style>
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none}
 html,body{margin:0;min-height:100%;background:#05060f;color:#fff;font-family:-apple-system,"SF Pro Display",system-ui,sans-serif;-webkit-user-select:none;user-select:none;overscroll-behavior:none}
@@ -142,7 +152,7 @@ html,body{overflow-x:hidden;max-width:100%}
   <div class="lockbox glass">
     <svg viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="3"/><path class="shackle" d="M8 11V8a4 4 0 018 0v3"/></svg>
     <h2 id="lkT">Enter passcode</h2>
-    <p id="lkS">Your storage area is locked.</p>
+    <p id="lkS">Your storage is locked.</p>
     <input id="lkI" type="password" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="Passcode">
     <button id="lkB">Unlock</button>
     <small id="lkE"></small>
@@ -151,7 +161,7 @@ html,body{overflow-x:hidden;max-width:100%}
 <div id="app">
   <header>
     <div class="top0">
-      <div><h1>Vain's Storage Area</h1><p id="storage">&nbsp;</p></div>
+      <div><h1>Vain's Storage</h1><p id="storage">&nbsp;</p></div>
       <button id="importBtn" class="glass sq" aria-label="Import" data-i="up"></button>
     </div>
     <label class="search glass"><span data-i="search"></span><input id="q" type="search" placeholder="Search" autocomplete="off"></label>
